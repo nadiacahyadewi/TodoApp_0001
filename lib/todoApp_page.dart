@@ -191,7 +191,27 @@ class _TodoappPageState extends State<TodoappPage> {
               'Daftar Tugas',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
+            const SizedBox(height: 8),
             
+            // Daftar tugas
+            Expanded(
+              child: ListView.builder(
+                controller: _scrollController,
+                itemCount: tasks.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    color: Colors.grey[200],
+                    margin: const EdgeInsets.only(bottom: 8),
+                    child: ListTile(
+                      title: Text(
+                        tasks[index],
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
