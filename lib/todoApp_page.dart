@@ -71,6 +71,13 @@ class _TodoappPageState extends State<TodoappPage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: const Text('Aplikasi Tugas'),
+        centerTitle: true,
+      ),
+    );
   }
 }
