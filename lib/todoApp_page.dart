@@ -161,6 +161,24 @@ class _TodoappPageState extends State<TodoappPage> {
                           },
                         ),
                       ),
+
+                      const SizedBox(width: 16),
+
+                      SizedBox(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.deepPurple,
+                            foregroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                          ),
+                          onPressed: addTask,
+                          child: Text('Tambah'),
+                        ),
+                      ),
+
                     ],
                   ),
                 ],
