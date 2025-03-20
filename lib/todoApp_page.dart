@@ -207,6 +207,18 @@ class _TodoappPageState extends State<TodoappPage> {
                         tasks[index],
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Tenggat: ${DateFormat('dd-MM-yyyy HH:mm').format(taskDates[index])}'),
+                          Text(
+                            _isChecked[index] ? 'Selesai' : 'Belum Selesai',
+                            style: TextStyle(
+                              color: _isChecked[index] ? Colors.green : Colors.red,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },
