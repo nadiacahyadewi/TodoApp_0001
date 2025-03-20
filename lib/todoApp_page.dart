@@ -219,6 +219,14 @@ class _TodoappPageState extends State<TodoappPage> {
                           ),
                         ],
                       ),
+                      trailing: Checkbox(
+                        value: _isChecked[index],
+                        onChanged: (bool? value) {
+                          setState(() {
+                            _isChecked[index] = !_isChecked[index];
+                          });
+                        },
+                      ),
                     ),
                   );
                 },
