@@ -1,4 +1,6 @@
+import 'package:bottom_picker/bottom_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class TodoappPage extends StatefulWidget {
   const TodoappPage({super.key});
@@ -87,10 +89,34 @@ class _TodoappPageState extends State<TodoappPage> {
               key: _formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [],
-              ))
+                children: [
+                  // Pemilih tanggal
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Tanggal Tugas:',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              _selectedDate == null
+                                  ? 'Pilih tanggal'
+                                  : DateFormat('dd-MM-yyyy HH:mm').format(_selectedDate!),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
-        ),)
+        ),
+      ),
     );
   }
 }
