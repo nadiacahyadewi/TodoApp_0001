@@ -46,6 +46,17 @@ class _TodoappPageState extends State<TodoappPage> {
       _nameController.clear();
       _selectedDate = null;
       _isSubmitted = false;
+
+      // Scroll ke tugas terbaru
+      Future.delayed(const Duration(milliseconds: 300), () {
+        if (_scrollController.hasClients) {
+          _scrollController.animateTo(
+            _scrollController.position.maxScrollExtent,
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeOut,
+          );
+        }
+      });
     });
   }
 
