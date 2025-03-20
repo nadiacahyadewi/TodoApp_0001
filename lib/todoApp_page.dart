@@ -109,6 +109,27 @@ class _TodoappPageState extends State<TodoappPage> {
                           ],
                         ),
                       ),
+                      IconButton(
+                        icon: const Icon(Icons.calendar_today, color: Colors.blue),
+                        onPressed: () {
+                          BottomPicker.dateTime(
+                            pickerTitle: const Text(
+                              'Pilih Tanggal & Waktu',
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                            ),
+                            onChange: (date) {
+                              setState(() {
+                                _selectedDate = date;
+                              });
+                            },
+                            minDateTime: DateTime.now(),
+                            maxDateTime: DateTime.now().add(const Duration(days: 365)),
+                            initialDateTime: DateTime.now(),
+                            gradientColors: const [Colors.blue, Colors.blue],
+                          ).show(context);
+                        },
+                      ),
+
                     ],
                   ),
                 ],
