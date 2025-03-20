@@ -128,16 +128,39 @@ class _TodoappPageState extends State<TodoappPage> {
                             gradientColors: const [Colors.blue, Colors.blue],
                           ).show(context);
                         },
+                      ), 
+                    ],
+                  ),
+                   //Error jika tanggal belum di pilih
+                  if (_isSubmitted && _selectedDate == null)
+                    const Padding(
+                      padding: EdgeInsets.only(top: 4),
+                      child: Text(
+                        'Harap pilih tanggal',
+                        style: TextStyle(color: Colors.red, fontSize: 12),
                       ),
-                      //Error jika tanggal belum di pilih
-                      if (_isSubmitted && _selectedDate == null)
-                        const Padding(
-                          padding: EdgeInsets.only(top: 4),
-                          child: Text(
-                            'Harap pilih tanggal',
-                            style: TextStyle(color: Colors.red, fontSize: 12),
+                    ),
+
+                  const SizedBox(height: 16),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          controller: _nameController,
+                          decoration: const InputDecoration(
+                            labelText: 'Nama Tugas',
+                            hintText: 'Masukkan nama tugas',
+                            border: OutlineInputBorder(),
                           ),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Harap isi nama tugas';
+                            }
+                            return null;
+                          },
                         ),
+                      ),
                     ],
                   ),
                 ],
