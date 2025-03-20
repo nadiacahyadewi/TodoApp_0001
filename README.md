@@ -1,16 +1,6 @@
-# statefull_stateless
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Date picker
+![Screenshot_1742472185](https://github.com/user-attachments/assets/56118404-9c0d-48df-9002-037fdd93ff2d)
+2. Checkbox dan snackbar message
+![Screenshot_1742472238](https://github.com/user-attachments/assets/cd35b4fd-140e-4fbb-b5bc-d4db310e0d12)
+3. Validasi
+![Screenshot_1742472265](https://github.com/user-attachments/assets/71476346-f6eb-4d72-8479-8ecd388d2e27)
