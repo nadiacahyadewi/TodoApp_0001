@@ -129,7 +129,15 @@ class _TodoappPageState extends State<TodoappPage> {
                           ).show(context);
                         },
                       ),
-
+                      //Error jika tanggal belum di pilih
+                      if (_isSubmitted && _selectedDate == null)
+                        const Padding(
+                          padding: EdgeInsets.only(top: 4),
+                          child: Text(
+                            'Harap pilih tanggal',
+                            style: TextStyle(color: Colors.red, fontSize: 12),
+                          ),
+                        ),
                     ],
                   ),
                 ],
