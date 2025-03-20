@@ -78,6 +78,19 @@ class _TodoappPageState extends State<TodoappPage> {
         title: const Text('Aplikasi Tugas'),
         centerTitle: true,
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [],
+              ))
+          ],
+        ),)
     );
   }
 }
