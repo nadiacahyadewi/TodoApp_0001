@@ -17,6 +17,13 @@ class _TodoappPageState extends State<TodoappPage> {
   DateTime? _selectedDate;
   bool _isSubmitted = false;
 
+  // Tambah tugas
+  void addTask() {
+    setState(() {
+      _isSubmitted = true;
+    });
+  }
+  
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
