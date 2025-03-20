@@ -184,6 +184,14 @@ class _TodoappPageState extends State<TodoappPage> {
                 ],
               ),
             ),
+            const SizedBox(height: 16),
+            
+            // Judul daftar
+            const Text(
+              'Daftar Tugas',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            
           ],
         ),
       ),
