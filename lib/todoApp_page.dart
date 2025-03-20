@@ -22,27 +22,29 @@ class _TodoappPageState extends State<TodoappPage> {
     setState(() {
       _isSubmitted = true;
     });
-    
+
     if (!_formKey.currentState!.validate() || _selectedDate == null) {
       return;
     }
-    
+
     setState(() {
       tasks.add(_nameController.text);
       taskDates.add(_selectedDate!);
       _isChecked.add(false);
-      
+
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: const Text('Tugas berhasil ditambahkan'),
           backgroundColor: Colors.teal,
           behavior: SnackBarBehavior.floating,
           margin: const EdgeInsets.all(16),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
           duration: const Duration(seconds: 2),
         ),
       );
-      
+
       _nameController.clear();
       _selectedDate = null;
       _isSubmitted = false;
@@ -60,6 +62,12 @@ class _TodoappPageState extends State<TodoappPage> {
     });
   }
 
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
